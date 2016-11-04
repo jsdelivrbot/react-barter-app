@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchItems } from '../actions/index';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 const ItemContainer = ({ item }) => {
 	return (
@@ -23,10 +24,14 @@ class AllItems extends Component {
 				<div className="text-center">All Items</div>
 				<div className="text-center">Time Remaining: 5 days</div>
 				<div className="all-items">
+					<ReactCSSTransitionGroup transitionName="item-bounce"
+						transitionEnterTimeout={200}
+						transitionLeaveTimeout={150}>
 						{
 							Object.values(this.props.items).map((item, i) =>
 								<ItemContainer key={i} item={item} />)
 						}
+					</ReactCSSTransitionGroup>
 				</div>
 			</div>
 		);
