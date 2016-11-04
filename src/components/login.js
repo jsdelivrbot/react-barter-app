@@ -16,7 +16,7 @@ class Login extends Component {
 					<label>Email</label>
 					<input type="text" className='form-control' {...password}/>
 				</div>
-				<button type='submit' className='btn btn-primary'>Submit</button>
+				<button type='submit' className='submit-button'>Submit</button>
 			</form>
 		);
 	}

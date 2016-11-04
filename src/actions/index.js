@@ -33,10 +33,19 @@ export function attemptLogin(props) {
 	console.log('Ship the form up to Dan');
 	console.log(props);
 
-	const request = 'REQUEST FROM DAN'
+	const request = 'REQUEST FROM DAN';
 
 	return {
 		type: LOGIN,
+		payload: request
+	};
+}
+
+export function submitSignup(props) {
+	const request = 'REQUEST SIGN UP TO DAN';
+
+	return {
+		type: 'signup',
 		payload: request
 	};
 }
