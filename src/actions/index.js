@@ -48,17 +48,6 @@ export function getUser() {
 
 }
 
-<<<<<<< HEAD
-
-
-
-
-
-
-
-
-
-=======
 export function attemptLogin(props) {
 	console.log('Ship the form up to Dan');
 	console.log(props);
@@ -79,4 +68,3 @@ export function submitSignup(props) {
 		payload: request
 	};
 }
->>>>>>> 5147cc1e2c9855520621d008606e310b808bf9b1
