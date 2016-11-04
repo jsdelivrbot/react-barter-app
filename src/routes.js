@@ -10,6 +10,11 @@ import YourItems from './components/your_items';
 import AddItems from './components/add_items';
 import Transaction from './components/transaction';
 
+import { 
+	getUser,
+	fetchItems
+} from './actions/index';
+
 export default (
 	<Route path="/" component={App}>
 		<IndexRoute component={Home} />
