@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router';
 
+// not a great place to put the getUser call, 
+// but the only option for now
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { getUser } from '../actions/index';
+
 const Navbar = () => {
 	return (
 		<div className="navbar-wrapper">
@@ -13,8 +19,12 @@ const Navbar = () => {
 	);
 }
 
-export default class App extends Component {
-  render() {
+class App extends Component {
+	componentWillMount() {
+		this.props.getUser();
+	}
+
+	render() {
     return (
       <div>
 	      <Navbar />
@@ -23,3 +33,10 @@ export default class App extends Component {
     );
   }
 }
+
+export default connect(null, { getUser })(App);
+
+
+
+
+

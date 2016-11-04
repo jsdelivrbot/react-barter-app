@@ -130,7 +130,23 @@
 	text-align: center;
 	width: 95%;
 }
-
+.lower-info-container {
+	width: 90%;
+	margin: 50px auto;
+	overflow: auto;
+}
+.prev-transactions {
+	float: left;
+	width: 60%;
+}
+.your-item {
+	float: left;
+	width: 40%;
+}
+.your-item > img {
+	display: block;
+	width: 100%;
+}
 
 /* IAN CSS */
 .jumbotron {
