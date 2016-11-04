@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchItems } from '../actions/index';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import { Link } from 'react-router';
 
 const ItemContainer = ({ item }) => {
 	return (
@@ -13,6 +14,18 @@ const ItemContainer = ({ item }) => {
 	);
 };
 
+const Ticker = (props) => {
+	return (
+		<div className="well">
+			<p className="ticker-text">
+				<span className="flavor-text">Time Left: </span>
+				<span className="time">5</span>
+				<span className="unit">days</span>
+			</p>
+		</div>
+	);
+}
+
 class AllItems extends Component {
 	componentWillMount() { // rewatch how to use onEnter to call an action, it wasn't working earlier
 		this.props.fetchItems();
@@ -21,8 +34,8 @@ class AllItems extends Component {
 	render() {
 		return (
 			<div>	
-				<div className="text-center">All Items</div>
-				<div className="text-center">Time Remaining: 5 days</div>
+				<h1 className="reg-header">All Items</h1>
+				<Ticker />
 				<div className="all-items">
 					<ReactCSSTransitionGroup transitionName="item-bounce"
 						transitionEnterTimeout={200}
@@ -33,6 +46,7 @@ class AllItems extends Component {
 						}
 					</ReactCSSTransitionGroup>
 				</div>
+				<Link to="/add-stuff" className="end-of-list-btn">Add an Item</Link>
 			</div>
 		);
 	}
