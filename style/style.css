@@ -1,0 +1,19 @@
+.jumbotron {
+	align-content: center;
+	background-color: #cccccc !important;
+}
+
+
+.title-image {
+	width: 150px;
+	height: 150px;
+	background-color: #a34520;
+}
+
+.title {
+	text-align: : 'center';
+}
+
+.btn-primary {
+	margin: 20px 20px 20px 20px;
+}
