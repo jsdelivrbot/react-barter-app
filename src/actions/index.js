@@ -1,9 +1,10 @@
 import axios from 'axios';
 import faker from 'faker';
 
+export const INITIAL_STATE = {};
 export const FETCH_ITEMS = 'FETCH_ITEMS';
 export const GET_USER = 'GET_USER';
-export const INITIAL_STATE = {};
+export const LOGIN = 'LOGIN';
 
 const BASE_URL = 'http://172.31.99.29';
 const QUERY_URL = (endpoint) => `${BASE_URL}${endpoint ? `/${endpoint}/` : ''}`;
@@ -47,6 +48,7 @@ export function getUser() {
 
 }
 
+<<<<<<< HEAD
 
 
 
@@ -56,3 +58,25 @@ export function getUser() {
 
 
 
+=======
+export function attemptLogin(props) {
+	console.log('Ship the form up to Dan');
+	console.log(props);
+
+	const request = 'REQUEST FROM DAN';
+
+	return {
+		type: LOGIN,
+		payload: request
+	};
+}
+
+export function submitSignup(props) {
+	const request = 'REQUEST SIGN UP TO DAN';
+
+	return {
+		type: 'signup',
+		payload: request
+	};
+}
+>>>>>>> 5147cc1e2c9855520621d008606e310b808bf9b1

@@ -4,10 +4,10 @@ import {Link} from 'react-router';
 export default (props) => {
 
 	if (props.signup) {
-		return <Link to='/signup' className='btn btn-primary'>Sign Up</Link>
+		return <Link to='/signup' className='login-button'>Sign Up</Link>
 	}
 
-	return <Link to='/login' className='btn btn-primary'>Log In</Link>
+	return <Link to='/login' className='login-button'>Log In</Link>
 	
 	
 }

@@ -83,7 +83,9 @@
 	opacity: 1.0;
 }
 /* END .item-container animations */
-.end-of-list-btn {
+.end-of-list-btn,
+.login-button,
+.submit-button {
 	display: block;
 	background-color: #85144b;
 	width: 250px;
