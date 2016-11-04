@@ -98,7 +98,9 @@
 	border-bottom: 4px solid #590030;
 	color: #FFFFFF;
 }
-.end-of-list-btn:hover {
+.end-of-list-btn:hover,
+.login-button:hover,
+.submit-button:hover {
 	text-decoration: none;
 	color: #FFFFFF;
 	opacity: 0.85;
@@ -143,11 +145,10 @@
 .title {
 	text-align: : 'center';
 }
-.btn-primary {
-	margin: 20px 20px 20px 20px;
+
+.input-std {
+	margin: 20px;
 }
-
-
 
 
 

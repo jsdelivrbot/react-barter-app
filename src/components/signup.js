@@ -13,10 +13,12 @@ class Signup extends Component {
 				handleSubmit(this.props.submitSignup);
 			} else {
 				console.log('info not filled out');
+				alert('Be sure to fill out an email and password.')
 			}
 			
 		} else {
 			console.log('wrong password');
+			alert('Passwords do not match, check your spelling.')
 		}
 	}
 

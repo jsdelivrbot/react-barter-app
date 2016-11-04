@@ -49,3 +49,14 @@ export function submitSignup(props) {
 		payload: request
 	};
 }
+
+export function submitItem(props) {
+	const request = 'SEND POST TO DANIMAL';
+	return {
+		type: 'addItem',
+		payload: request
+	};
+}
+
+
+

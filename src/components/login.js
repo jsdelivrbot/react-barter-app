@@ -13,7 +13,7 @@ class Login extends Component {
 					<input type="text" className='form-control' {...email} />
 				</div>
 				<div className='form-group'>
-					<label>Email</label>
+					<label>Password</label>
 					<input type="text" className='form-control' {...password}/>
 				</div>
 				<button type='submit' className='submit-button'>Submit</button>
