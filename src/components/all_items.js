@@ -9,7 +9,10 @@ const ItemContainer = ({ item }) => {
 	return (
 		<div className="item-container">
 			<img src={item.imgUrl} alt={item.title} />
-			<div className="text-center">{item.title}</div>
+			<div className="item-title">{item.title}</div>
+			<div className="desc-container">
+				<p className="desc">{item.description}</p>
+			</div>
 		</div>
 	);
 };
