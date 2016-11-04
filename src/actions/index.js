@@ -2,6 +2,7 @@ import axios from 'axios';
 import faker from 'faker';
 
 export const FETCH_ITEMS = 'FETCH_ITEMS';
+export const LOGIN = 'LOGIN';
 
 const BASE_URL = 'http://172.31.99.29';
 const QUERY_URL = (endpoint) => `${BASE_URL}${endpoint ? `/${endpoint}/` : ''}`;
@@ -26,4 +27,16 @@ export function fetchItems() {
 	}
 	return tmp;
 
+}
+
+export function attemptLogin(props) {
+	console.log('Ship the form up to Dan');
+	console.log(props);
+
+	const request = 'REQUEST FROM DAN'
+
+	return {
+		type: LOGIN,
+		payload: request
+	};
 }

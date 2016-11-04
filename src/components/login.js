@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import {reduxForm} from 'redux-form';
+import {attemptLogin} from '../actions/index';
 
 class Login extends Component {
 	render() {
 		const {fields: {email, password}, handleSubmit} = this.props;
 
 		return (
-			<form onSubmit={handleSubmit}>
+			<form onSubmit={handleSubmit(this.props.attemptLogin)}>
 				<div className='form-group'>
 					<label>Email</label>
 					<input type="text" className='form-control' {...email} />
@@ -21,7 +22,10 @@ class Login extends Component {
 	}
 }
 
+//Connect: first argument is mapstatetoprops, 2nd is mapdispatchtoprops
+//reduxform: 1st arg is form config, 2nd is mapstatetoprops, 3rd is mapdispatchtoprops
+
 export default reduxForm ({
 	form: 'login',
 	fields: ['email', 'password']
-})(Login);
+}, null, {attemptLogin})(Login);
