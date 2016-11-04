@@ -3,7 +3,10 @@ import React, { Component } from 'react';
 export default class App extends Component {
   render() {
     return (
-      <div>It is working now</div>
+      <div>
+	      <div>It is working now</div>
+	      <div>{this.props.children}</div>
+      </div>
     );
   }
 }
