@@ -1,2 +1,3 @@
-# react-barter-app
-react app for bartering
+# ReduxSimpleStarter
+
+a react bartering app
