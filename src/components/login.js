@@ -8,11 +8,12 @@ class Login extends Component {
 
 		return (
 			<form onSubmit={handleSubmit(this.props.attemptLogin)}>
-				<div className='form-group'>
+				<h3 className='reg-header'>Login with Email/Password</h3>
+				<div className='form-group input-std'>
 					<label>Email</label>
 					<input type="text" className='form-control' {...email} />
 				</div>
-				<div className='form-group'>
+				<div className='form-group input-std'>
 					<label>Password</label>
 					<input type="text" className='form-control' {...password}/>
 				</div>

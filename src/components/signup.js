@@ -26,15 +26,16 @@ class Signup extends Component {
 		const {fields: {email, password, passcheck}, handleSubmit} = this.props;
 		return (
 			<form onSubmit={event => { this.checkPassword(event, email, password, passcheck, handleSubmit) }}>
-				<div className='form-group'>
+				<h3 className='reg-header'>Sign Up</h3>
+				<div className='form-group input-std'>
 					<label>Email</label>
 					<input type="text" className='form-control' {...email} />
 				</div>
-				<div className='form-group'>
+				<div className='form-group input-std'>
 					<label>Password</label>
 					<input type="password" className='form-control' {...password} />
 				</div>
-				<div className='form-group'>
+				<div className='form-group input-std'>
 					<label>Confirm Password</label>
 					<input type="password" className='form-control' {...passcheck} />
 				</div>
